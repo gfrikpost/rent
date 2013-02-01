@@ -142,4 +142,21 @@ describe User do
       @user.should be_admin
     end
   end
+  
+  describe "userpost associations" do
+    
+    before(:each) do
+      @user = User.create(@attr)
+      @up1 = Factory(:userpost, :user => @user, :created_at => 1.day.ago)
+      @up2 = Factory(:userpost, :user => @user, :created_at => 1.hour.ago)
+    end
+    
+    it "should have a userposts attribute" do
+      @user.should respond_to(:userposts)
+    end
+    
+    it "should have the right userposts in the right order" do
+      @user.userposts.should == [@up2, @up1]
+    end
+  end
 end
