@@ -26,4 +26,19 @@ describe Userpost do
       @userpost.user.should    == @user
     end
   end
+  
+  describe "validations" do
+    
+    it "should require a user id" do
+      Userpost.new(@attr).should_not be_valid
+    end
+    
+    it "should require nonblank content" do
+      @user.userposts.build(:content => "  ").should_not be_valid
+    end
+    
+    it "should reject long content" do
+      @user.userposts.build(:content => "a" * 65536).should_not be_valid
+    end
+  end
 end
