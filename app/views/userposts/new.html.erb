@@ -1,0 +1,10 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="userpost">What's up?</h1>
+        <%= render 'shared/userpost_form' %>
+      </td>
+    </tr>
+  </table>
+<% end %>

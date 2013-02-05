@@ -36,7 +36,7 @@ describe UserpostsController do
       
       it "should render the home page" do
         post :create, :userpost => @attr
-        response.should render_template('pages/home')
+        response.should render_template(new_userpost_path)
       end
     end
     
@@ -60,6 +60,38 @@ describe UserpostsController do
       it "should have a flash message" do
         post :create, :userpost => @attr
         flash[:success].should =~ /post created/i
+      end
+    end
+  end
+  
+  describe "DELETE 'destroy'" do
+
+    describe "for an unauthorized user" do
+
+      before(:each) do
+        @user = Factory(:user)
+        wrong_user = Factory(:user, :email => Factory.next(:email))
+        test_sign_in(wrong_user)
+        @userpost = Factory(:userpost, :user => @user)
+      end
+
+      it "should deny access" do
+        delete :destroy, :id => @userpost
+        response.should redirect_to(root_path)
+      end
+    end
+
+    describe "for an authorized user" do
+
+      before(:each) do
+        @user = test_sign_in(Factory(:user))
+        @userpost = Factory(:userpost, :user => @user)
+      end
+
+      it "should destroy the userpost" do
+        lambda do
+          delete :destroy, :id => @userpost
+        end.should change(Userpost, :count).by(-1)
       end
     end
   end

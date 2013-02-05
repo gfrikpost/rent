@@ -233,6 +233,10 @@ div.user_info span.userposts {
   font-size: 80%;
 }
 
+div.user_info span.new_userpost{
+    font-size: 80%;   
+}
+
 form.new_userpost {
   margin-bottom: 2em;
 }

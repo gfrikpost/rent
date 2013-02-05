@@ -5,4 +5,11 @@
       Posted <%= time_ago_in_words(userpost.created_at) %> ago.
     </span>
   </td>
+  <% if current_user?(userpost.user) %>
+  <td>
+    <%= link_to "delete", userpost, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => userpost.content %>
+  </td>
+  <% end %>
 </tr>
