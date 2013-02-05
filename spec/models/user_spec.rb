@@ -158,5 +158,12 @@ describe User do
     it "should have the right userposts in the right order" do
       @user.userposts.should == [@up2, @up1]
     end
+    
+    it "should destroy assciated userposts" do
+      @user.destroy
+      [@up1, @up2].each do |userpost|
+        Userpost.find_by_id(userpost.id).should be_nil
+      end
+    end
   end
 end
