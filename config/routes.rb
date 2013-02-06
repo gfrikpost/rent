@@ -3,6 +3,10 @@ Rent::Application.routes.draw do
   resources :sessions,  :only => [:new, :create, :destroy]
   resources :userposts, :only => [:new, :create, :destroy]
   
+  resources :users do
+    resources :userposts
+  end
+  
   match '/userposts/new', :to => 'userposts#new'
   
   match '/signup',  :to => 'users#new'

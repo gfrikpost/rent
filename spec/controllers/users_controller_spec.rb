@@ -102,6 +102,32 @@ describe UsersController do
     end
   end
   
+  describe "GET 'show' paginate" do
+    
+    before(:each) do
+      @user = Factory(:user)
+      @userposts = []
+      50.times do
+        @userposts << Factory(:userpost, :user => @user, :content => "Foo bar")
+      end
+    end
+    
+    it "should paginate posts" do
+      
+      get :show, :id => @user
+      response.should have_selector("div.pagination")
+      response.should have_selector("span.disabled", :content => "Previous")
+      response.should have_selector("a", :content => "2")
+      response.should have_selector("a", :content => "Next")
+    end
+    
+    it "should not have the link 'delete'" do
+      
+      get :show, :id => @user
+      response.should_not have_selector("a", :content => "delete")
+    end
+  end
+  
   describe "GET 'new'" do
     it "should be successful" do
       get :new

@@ -2,6 +2,12 @@ class UserpostsController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy]
   before_filter :authorized_user, :only => :destroy
   
+  def index
+    @user = User.find(params[:user_id])
+    @title = "All posts" + " " + @user.name
+    @userposts = @user.userposts.paginate(:page => params[:page], per_page: 15)
+  end
+  
   def new
     @title = "New Post"
     @userpost = Userpost.new if signed_in?
