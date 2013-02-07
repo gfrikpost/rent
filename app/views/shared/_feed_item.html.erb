@@ -16,6 +16,8 @@
     <%= link_to "delete", feed_item, :method => :delete,
                                      :confirm => "You sure?",
                                      :title => feed_item.content %>
+    |
+    <%= link_to "edit", edit_userpost_path(feed_item) %>
   </td>
   <% end %>
 </tr>

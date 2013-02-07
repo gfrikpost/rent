@@ -1,7 +1,7 @@
 Rent::Application.routes.draw do
   resources :users
   resources :sessions,  :only => [:new, :create, :destroy]
-  resources :userposts, :only => [:new, :create, :destroy]
+  resources :userposts
   
   resources :users do
     resources :userposts

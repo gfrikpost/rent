@@ -64,6 +64,24 @@ describe UserpostsController do
     end
   end
   
+  describe "GET 'edit'" do
+    
+    before(:each) do
+      @user = test_sign_in(Factory(:user))
+      @userpost = Factory(:userpost, :user => @user)
+    end
+    
+    it "should be successful" do
+      get :edit, :id => @userpost
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+      get :edit, :id => @userpost
+      response.should have_selector("title", :content => "Edit Post")
+    end
+  end
+  
   describe "DELETE 'destroy'" do
 
     describe "for an unauthorized user" do

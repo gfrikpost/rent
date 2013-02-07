@@ -10,6 +10,8 @@
     <%= link_to "delete", userpost, :method => :delete,
                                      :confirm => "You sure?",
                                      :title => userpost.content %>
+    |
+    <%= link_to "edit", edit_userpost_path(userpost) %>
   </td>
   <% end %>
 </tr>

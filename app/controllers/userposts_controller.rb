@@ -24,6 +24,22 @@ class UserpostsController < ApplicationController
     end
   end
   
+  def edit
+    @userpost = Userpost.find(params[:id])
+    @title = "Edit Post"
+  end
+  
+  def update
+    @userpost = Userpost.find(params[:id])
+    if @userpost.update_attributes(params[:userpost])
+      flash[:success] = "Post Changed!"
+      redirect_to root_path
+    else
+      @title = "Edit Post"
+      render 'edit'
+    end
+  end
+  
   def destroy
     @userpost.destroy
     redirect_back_or root_path
