@@ -5,5 +5,7 @@
   </div>
   <div class="actions">
     <%= f.submit "Submit" %>
+    <%= button_tag "Cancel",:type => 'button',:class => "subBtn",
+                  :onclick => "location.href = '#{root_path}'" %>
   </div>
 <% end %>

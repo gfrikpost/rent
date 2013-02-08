@@ -95,4 +95,21 @@ describe "LayoutLinks" do
                                         :title => "Delete #{@user.name}")
     end
   end
+  
+  describe "link 'delete' not visible for another user" do
+    
+    before(:each) do
+      @user = Factory(:user)
+      @second_user = Factory(:user, :name => "Bob", :email => "another@example.com")
+      integration_sign_in(@user)
+      mp1 = Factory(:userpost, :user => @user, :content => "Foo bar")
+    end
+    
+    it "should not have a delete link" do
+      integration_sign_in(@second_user)
+      visit user_path(@user)
+      response.should_not have_selector("a",:content => "delete",
+                                            :title => "Foo bar")
+    end
+  end
 end

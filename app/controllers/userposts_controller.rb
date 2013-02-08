@@ -2,6 +2,12 @@ class UserpostsController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy]
   before_filter :authorized_user, :only => :destroy
   
+  def index
+    @user = User.find(params[:user_id])
+    @title = "All posts" + " " + @user.name
+    @userposts = @user.userposts.paginate(:page => params[:page], per_page: 15)
+  end
+  
   def new
     @title = "New Post"
     @userpost = Userpost.new if signed_in?
@@ -15,6 +21,22 @@ class UserpostsController < ApplicationController
     else
       @feed_items = []
       render new_userpost_path
+    end
+  end
+  
+  def edit
+    @userpost = Userpost.find(params[:id])
+    @title = "Edit Post"
+  end
+  
+  def update
+    @userpost = Userpost.find(params[:id])
+    if @userpost.update_attributes(params[:userpost])
+      flash[:success] = "Post Changed!"
+      redirect_to root_path
+    else
+      @title = "Edit Post"
+      render 'edit'
     end
   end
   

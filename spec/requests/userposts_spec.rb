@@ -38,4 +38,12 @@ describe "Userposts" do
       end
     end
   end
+  
+  describe "should display the number of posts" do
+    lambda do
+      visit root_path
+      response.should have_selector("span", :class => "userposts",
+              :content => pluralize(current_user.userposts.count, "userpost"))
+    end
+  end
 end

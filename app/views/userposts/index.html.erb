@@ -1,0 +1,8 @@
+<h1>All Posts  <%= @user.name %></h1>
+
+<% unless @user.userposts.empty? %>
+        <table class="userposts" summary="User userposts">
+          <%= render @userposts %>
+        </table>
+        <%= will_paginate @userposts %>
+<% end %>
