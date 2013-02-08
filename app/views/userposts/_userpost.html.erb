@@ -3,15 +3,12 @@
     <span class="content"><%= wrap(userpost.content) %></span>
     <span class="timestamp">
       Posted <%= time_ago_in_words(userpost.created_at) %> ago.
+      <% if current_user?(userpost.user) %>
+        <%= link_to "edit", edit_userpost_path(userpost) %> |
+        <%= link_to "delete", userpost, :method => :delete,
+                                        :confirm => "You sure?",
+                                        :title => userpost.content %>
+      <% end %>
     </span>
   </td>
-  <% if current_user?(userpost.user) %>
-  <td>
-    <%= link_to "delete", userpost, :method => :delete,
-                                     :confirm => "You sure?",
-                                     :title => userpost.content %>
-    |
-    <%= link_to "edit", edit_userpost_path(userpost) %>
-  </td>
-  <% end %>
 </tr>
