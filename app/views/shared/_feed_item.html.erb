@@ -9,15 +9,12 @@
     <span class="content"><%= wrap(feed_item.content) %></span>
     <span class="timestamp">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+        <% if current_user?(feed_item.user) %>
+          <%= link_to "edit", edit_userpost_path(feed_item) %> |
+          <%= link_to "delete", feed_item, :method => :delete,
+                                           :confirm => "You sure?",
+                                           :title => feed_item.content %>
+        <% end %>
     </span>
   </td>
-  <% if current_user?(feed_item.user) %>
-  <td>
-    <%= link_to "delete", feed_item, :method => :delete,
-                                     :confirm => "You sure?",
-                                     :title => feed_item.content %>
-    |
-    <%= link_to "edit", edit_userpost_path(feed_item) %>
-  </td>
-  <% end %>
 </tr>
