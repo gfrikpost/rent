@@ -7,6 +7,7 @@ body {
 }
 
 header {
+    position: relative;
     padding-top: 20px;
 }
 
@@ -77,6 +78,18 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* User_info */
+
+div.sidebar {
+    position: relative;
+    float: right;
+    top: -5em;
+    width: 25%;
+    padding: 3px;
+    vertical-align: top;
+    background: white;
+}
+
 /* Sign up button */
 
 a.signup_button {
@@ -120,13 +133,6 @@ table.profile {
 td.main {
     width: 70%;
     padding: 1em;
-}
-
-td.sidebar {
-    width: 30%;
-    padding: 1em;
-    vertical-align: top;
-    background: #ffc;
 }
 
 .profile img.gravatar {
@@ -242,6 +248,17 @@ form.new_userpost {
 }
 
 form.new_userpost textarea {
-  height: 4em;
+  height: 20em;
+  width: 47em;
   margin-bottom: 0;
+}
+
+form.edit_userpost {
+    margin-bottom: 2em;
+}
+
+form.edit_userpost textarea {
+  height: 20em;
+  width: 47em;
+  margin-bottom: 0;  
 }
