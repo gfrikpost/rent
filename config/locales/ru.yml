@@ -1,0 +1,16 @@
+ru:
+  
+  layouts:
+      header:
+        home: "Домой"
+        users: "Пользователи"
+        profile: "Профиль"
+        settings: "Настройки"
+        help: "Помощь"
+        sign_out: "Выйти"
+        sign_in: "Войти"
+      footer:
+        about: "О нас"
+        contact: "Контакты"
+        news: "Новости"
+        rails_tutorial: "Rails Tutorial"
