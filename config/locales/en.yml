@@ -18,3 +18,28 @@ en:
       contact: "Contact"
       news: "News"
       rails_tutorial: "Rails Tutorial"
+     
+  pages:
+    help:
+      help: "Help"
+      ghoror: "Get help on Ruby on Rails Tutorial at the"
+      tghotsample_app: "To get help on this sample app, see the"
+    about:
+      about_us: "About Us"
+      iaptmabook: "is a project to make a book and screencasts to
+        teach web development with"
+      tit_sample_app_ftt: ". This is the sample application for
+        the tutorial."
+    contact:
+      contact: "Contact"
+      corort_about: "Contact Ruby on Rails Tutorial about the sample app at the"
+  
+  shared:
+    signup_now:
+      sample_app: "Sample App"
+      tithome: "This is the home page for the"
+      signup_now: "Sign up now!"
+      rortutorial: "Ruby on Rails Tutorial"
+  
+  
+      

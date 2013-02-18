@@ -14,3 +14,25 @@ ru:
         contact: "Контакты"
         news: "Новости"
         rails_tutorial: "Rails Tutorial"
+        
+  pages:
+    help:
+      help: "Помощь"
+      ghoror: "Вы можете получить помощь по учебнику Ruby on Rails на странице"
+      tghotsample_app: "Вы можете получить помощь по этому приложению на сранице"
+    about:
+      about_us: "О нас"
+      iaptmabook: "это проект, чтобы создать книгу и видеоролики для обучения веб разработке на"
+      tit_sample_app_ftt: ". Это образец примера приложения."
+    contact:
+      contact: "Контакты"
+      corort_about: "Связаться с разработчиками этого приложения вы можете на странице"
+  
+  shared:
+    signup_now:
+      sample_app: "Пример Приложения"
+      tithome: "Это домашняя страница для примера приложения"
+      signup_now: "Регистрация!"
+      rortutorial: "учебника Ruby on Rails"
+      
+  
