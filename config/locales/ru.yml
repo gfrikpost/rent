@@ -1,13 +1,14 @@
 ru:
   
+  sign_out: "Выйти"
+  
   layouts:
       header:
         home: "Домой"
         users: "Пользователи"
         profile: "Профиль"
         settings: "Настройки"
-        help: "Помощь"
-        sign_out: "Выйти"
+        help: "Помощь"      
         sign_in: "Войти"
       footer:
         about: "О нас"
@@ -28,11 +29,46 @@ ru:
       contact: "Контакты"
       corort_about: "Связаться с разработчиками этого приложения вы можете на странице"
   
+  sessions:
+    new:
+      sign_in: "Войти"
+      email: "Электронная почта"
+      password: "Пароль"
+      new_user: "Новенький?"
+      signup_now: "Зарегистрируйся!"
+  
   shared:
+    user_info:
+      post: "post"
+      new_post: "Создать Пост"
     signup_now:
       sample_app: "Пример Приложения"
       tithome: "Это домашняя страница для примера приложения"
       signup_now: "Регистрация!"
       rortutorial: "учебника Ruby on Rails"
+    show_userposts:
+      all_posts: "Все Посты"
+    feed_item:
+      posted: "Отправлено"
+      ago: "назад."
+      edit: "править"
+      delete: "удалить"
+      you_sure: "Вы уверенны?"
+  
+  userposts:
+    userpost:
+      posted: "Отправлено"
+      ago: "назад."
+      edit: "править"
+      delete: "удалить"
+      you_sure: "Вы уверенны?"
       
+  users:
+    show:
+      posts: "постов"
+    index:
+      all_users: "Все пользователи"
+    user:
+      delete: "удалить"
+      you_sure: "Вы уверенны?"
   

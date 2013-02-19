@@ -4,7 +4,8 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-        Posts<%= @user.userposts.count %>
+        <%= @user.userposts.count %>
+        <%= t('.posts') %>
       </h1>
       <% unless @user.userposts.empty? %> 
         <table class="userposts" summary="User userposts">

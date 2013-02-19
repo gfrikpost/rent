@@ -8,11 +8,11 @@
     </span>
     <span class="content"><%= wrap(feed_item.content) %></span>
     <span class="timestamp">
-      Posted <%=  time_ago_in_words(feed_item.created_at) %> ago.
+      <%= t('.posted') %> <%= time_ago_in_words(feed_item.created_at) %> <%= t('.ago') %>
         <% if current_user?(feed_item.user) %>
-          <%= link_to "edit", edit_userpost_path(feed_item) %> |
-          <%= link_to "delete", feed_item, :method => :delete,
-                                           :confirm => "You sure?",
+          <%= link_to t('.edit'), edit_userpost_path(feed_item) %> |
+          <%= link_to t('.delete'), feed_item, :method => :delete,
+                                           :confirm => t('.you_sure'),
                                            :title => feed_item.content %>
         <% end %>
     </span>

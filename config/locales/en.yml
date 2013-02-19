@@ -3,6 +3,8 @@
 
 en:
   
+  sign_out: "Sign Out"
+  
   layouts:
     header:
       home: "Home"
@@ -10,7 +12,6 @@ en:
       profile: "Profile"
       settings: "Settings"
       help: "Help"
-      sign_out: "Sign out"
       sign_in: "Sign in"
       
     footer: 
@@ -34,12 +35,46 @@ en:
       contact: "Contact"
       corort_about: "Contact Ruby on Rails Tutorial about the sample app at the"
   
+  sessions:
+    new:
+      sign_in: "Sign In"
+      email: "Email"
+      password: "Password"
+      new_user: "New user?"
+      signup_now: "Sign up now!"
+  
   shared:
+    user_info:
+      post: "post"
+      new_post: "New Post"
     signup_now:
       sample_app: "Sample App"
       tithome: "This is the home page for the"
       signup_now: "Sign up now!"
       rortutorial: "Ruby on Rails Tutorial"
+    show_userposts:
+      all_posts: "All Posts"
+    feed_item:
+      posted: "Posted"
+      ago: "ago."
+      edit: "edit"
+      delete: "delete"
+      you_sure: "You sure?"
+      
+  userposts:
+    userpost:
+      posted: "Posted"
+      ago: "ago."
+      edit: "edit"
+      delete: "delete"
+      you_sure: "You sure?"
   
-  
+  users:
+    show:
+      posts: "posts"
+    index:
+      all_users: "All users"
+    user:
+      delete: "delete"
+      you_sure: "You sure?"
       

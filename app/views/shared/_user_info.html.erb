@@ -5,10 +5,10 @@
       <%= current_user.name %>
     </span>
     <span class="userposts">
-      <%= pluralize(current_user.userposts.count, "userpost") %>
+      <%= pluralize(current_user.userposts.count, t('.post')) %>
     </span>
     <span class="new_userpost">
-      <%= link_to "New Post", new_userpost_path(current_user) %>
+      <%= link_to t('.new_post'), new_user_userpost_path(current_user) %>
     </span>
   </a>
 </div>

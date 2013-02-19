@@ -9,7 +9,7 @@ Rent::Application.routes.draw do
       resources :userposts
     end
   
-    match '/userposts/new', :to => 'userposts#new'
+    match '/users/userposts/new', :to => 'userposts#new'
   
     match '/signup',  :to => 'users#new'
     match '/signin',  :to => 'sessions#new'
