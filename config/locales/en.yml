@@ -60,8 +60,17 @@ en:
       edit: "edit"
       delete: "delete"
       you_sure: "You sure?"
+    userpost_form:
+      submit: "Submit"
+      cancel: "Cancel"
       
   userposts:
+    edit:
+      edit_post: "Edit Post"
+      update: "Update"
+      cancel: "Cancel"
+    new:
+      new_post: "New Post"
     userpost:
       posted: "Posted"
       ago: "ago."
@@ -70,6 +79,18 @@ en:
       you_sure: "You sure?"
   
   users:
+    edit:
+      edit_user: "Edit user"
+      update: "Update"
+      cancel: "Cancel"
+      change: "change"
+    fields:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      confirmation: "Confirmation"
+    new:
+      sign_up: "sign_up"
     show:
       posts: "posts"
     index:

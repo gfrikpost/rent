@@ -2,10 +2,7 @@
   <a href="<%= user_path(current_user) %>">
     <%= gravatar_for current_user, :size => 30 %>
     <span class="user_name">
-      <%= current_user.name %>
-    </span>
-    <span class="userposts">
-      <%= pluralize(current_user.userposts.count, t('.post')) %>
+      <%= current_user.name %>|<%= current_user.userposts.count %> <%= t('.post') %>
     </span>
     <span class="new_userpost">
       <%= link_to t('.new_post'), new_user_userpost_path(current_user) %>

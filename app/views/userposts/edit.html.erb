@@ -2,15 +2,15 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="userpost">Edit Post</h1>
+        <h1 class="userpost"><%= t('.edit_post') %></h1>
         <%= form_for @userpost do |f| %>
           <%= render 'shared/error_messages', :object => f.object %>
           <div class="field">
           <%= f.text_area :content %>
           </div>
           <div class="actions">
-          <%= f.submit "Update" %>
-          <%= button_tag "Cancel",:type => 'button',:class => "subBtn",
+          <%= f.submit  t('.update') %>
+          <%= button_tag t('.cancel'),:type => 'button',:class => "subBtn",
                         :onclick => "location.href = '#{root_path}'" %>
           </div>
         <% end %>

@@ -4,8 +4,8 @@
     <%= f.text_area :content %>
   </div>
   <div class="actions">
-    <%= f.submit "Submit" %>
-    <%= button_tag "Cancel",:type => 'button',:class => "subBtn",
+    <%= f.submit t('.submit') %>
+    <%= button_tag t('.cancel'),:type => 'button',:class => "subBtn",
                   :onclick => "location.href = '#{root_path}'" %>
   </div>
 <% end %>

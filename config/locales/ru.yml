@@ -1,5 +1,27 @@
 ru:
   
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one: "минуту"
+        other: "%{count} минут"
+      x_hours:
+        one: "1 час"
+        two: "2 часа"
+        three: "3 часа"
+        four: "4 часа" 
+        other: "%{count} часов"
+      x_days:
+        one: "1 день"
+        two: "2 дня"
+        three: "3 дня"
+        four: "4 дня"
+        other: "%{count} дней"
+  
+  will_paginate:
+    previous_label: "Предыдущая"
+    next_label: "Следующая"
+  
   sign_out: "Выйти"
   
   layouts:
@@ -39,7 +61,7 @@ ru:
   
   shared:
     user_info:
-      post: "post"
+      post: "постов"
       new_post: "Создать Пост"
     signup_now:
       sample_app: "Пример Приложения"
@@ -54,8 +76,17 @@ ru:
       edit: "править"
       delete: "удалить"
       you_sure: "Вы уверенны?"
+    userpost_form:
+      submit: "Отправить"
+      cancel: "Отмена"
   
   userposts:
+    edit:
+      edit_post: "Редактирование"
+      update: "Изменить"
+      cancel: "Отмена"
+    new:
+      new_post: "Создать Пост"
     userpost:
       posted: "Отправлено"
       ago: "назад."
@@ -64,8 +95,20 @@ ru:
       you_sure: "Вы уверенны?"
       
   users:
+    edit:
+      edit_user: "Редаирование данных"
+      update: "Сохранить"
+      cancel: "Отмена"
+      change: "изменить граватар"
+    fields:
+      name: "Имя"
+      email: "Электронный адрес"
+      password: "Пароль"
+      confirmation: "Подтверждение"
     show:
       posts: "постов"
+    new:
+      sign_up: "Регистрация"
     index:
       all_users: "Все пользователи"
     user:
