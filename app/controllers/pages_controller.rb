@@ -1,21 +1,21 @@
 class PagesController < ApplicationController
   
   def home
-    @title = "Home"
+    @title = t('.home')
     if signed_in?
       @feed_items = current_user.feed.paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def contact
-    @title = "Contact"
+    @title = t('.contact')
   end
   
   def about
-    @title = "About"
+    @title = t('.about')
   end
   
   def help
-    @title = "Help"
+    @title = t('.help')
   end
 end

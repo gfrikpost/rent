@@ -1,22 +1,92 @@
 ru:
   
+        
+  
+  home: "Главная"
+  contact: "Контакты"
+  about: "О нас"
+  help: "Помощь"
+  sign_in: "Вход"
+  invalid_email_pass: "Не верная комбинация почта/пароль."
+  all_posts: "Все посты пользователя"
+  new_post: "Создать Пост"
+  post_created: "Пост создан!"
+  edit_post: "Редактирование"
+  post_changed: "Пост изменён!"
+  all_users: "Все пользователи"
+  sign_up: "Регистрация"
+  welcome: "Добро пожаловать!"
+  profile_up: "Профиль изменён."
+  edit_user: "Редактирование пользователя"
+  n_eras_its: "Нельзя удалить самого себя"
+  user_destroyed: "Пользователь удален"
+    
   datetime:
     distance_in_words:
-      x_minutes:
-        one: "минуту"
-        other: "%{count} минут"
-      x_hours:
-        one: "1 час"
-        two: "2 часа"
-        three: "3 часа"
-        four: "4 часа" 
-        other: "%{count} часов"
+      about_x_hours:
+        few: около %{count} часов
+        many: около %{count} часов
+        one: около %{count} часа
+        other: около %{count} часа
+      about_x_months:
+        few: около %{count} месяцев
+        many: около %{count} месяцев
+        one: около %{count} месяца
+        other: около %{count} месяца
+      about_x_years:
+        few: около %{count} лет
+        many: около %{count} лет
+        one: около %{count} года
+        other: около %{count} лет
+      almost_x_years:
+        one: почти 1 год
+        few: почти %{count} года
+        many: почти %{count} лет
+        other: почти %{count} лет
+      half_a_minute: меньше минуты
+      less_than_x_minutes:
+        few: меньше %{count} минут
+        many: меньше %{count} минут
+        one: меньше %{count} минуты
+        other: меньше %{count} минуты
+      less_than_x_seconds:
+        few: меньше %{count} секунд
+        many: меньше %{count} секунд
+        one: меньше %{count} секунды
+        other: меньше %{count} секунды
+      over_x_years:
+        few: больше %{count} лет
+        many: больше %{count} лет
+        one: больше %{count} года
+        other: больше %{count} лет
       x_days:
-        one: "1 день"
-        two: "2 дня"
-        three: "3 дня"
-        four: "4 дня"
-        other: "%{count} дней"
+        few: ! '%{count} дня'
+        many: ! '%{count} дней'
+        one: ! '%{count} день'
+        other: ! '%{count} дней'
+      x_minutes:
+        few: ! '%{count} минуты'
+        many: ! '%{count} минут'
+        one: ! '%{count} минуту'
+        other: ! '%{count} минут'
+      x_months:
+        few: ! '%{count} месяца'
+        many: ! '%{count} месяцев'
+        one: ! '%{count} месяц'
+        other: ! '%{count} месяца'
+      x_seconds:
+        few: ! '%{count} секунды'
+        many: ! '%{count} секунд'
+        one: ! '%{count} секунда'
+        other: ! '%{count} секунды'
+    prompts:
+      day: День
+      hour: Часов
+      minute: Минут
+      month: Месяц
+      second: Секунд
+      year: Год
+  
   
   will_paginate:
     previous_label: "Предыдущая"
@@ -25,8 +95,10 @@ ru:
   sign_out: "Выйти"
   
   layouts:
+      application:
+        base_title: "Пример приложения"
       header:
-        home: "Домой"
+        home: "Главная"
         users: "Пользователи"
         profile: "Профиль"
         settings: "Настройки"

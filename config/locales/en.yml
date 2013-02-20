@@ -3,9 +3,29 @@
 
 en:
   
+  home: "Home"
+  contact: "Contact"
+  about: "About"
+  help: "Help"
+  sign_in: "Sign in"
+  invalid_email_pass: "Invalid email/password combination."
+  all_posts: "All posts user"
+  new_post: "New Post"
+  post_created: "Post created!"
+  edit_post: "Edit Post"
+  post_changed: "Post Changed!"
+  all_users: "All users"
+  welcome: "Welcome to the Sample App!"
+  profile_up: "Profile updated."
+  edit_user: "Edit user"
+  n_eras_its: "not erases itself"
+  user_destroyed: "User destroyed."
+  
   sign_out: "Sign Out"
   
   layouts:
+    application:
+      base_title: "Ruby on Rails Tutorial Sample App"
     header:
       home: "Home"
       users: "Users"
@@ -21,6 +41,7 @@ en:
       rails_tutorial: "Rails Tutorial"
      
   pages:
+    
     help:
       help: "Help"
       ghoror: "Get help on Ruby on Rails Tutorial at the"
@@ -98,4 +119,13 @@ en:
     user:
       delete: "delete"
       you_sure: "You sure?"
+      
+  activerecord:
+    errors:
+      template:
+        header:
+          one:   "1 error prohibited !!! this {{model}} from being saved"
+          other:  "{{count}} errors prohibited !!! this {{model}} from being saved"
+        # The variable :count is also available
+        body: "There were problems !!! with the following fields:"
       

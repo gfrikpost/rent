@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_filter :admin_user,   :only => :destroy
   
   def index
-    @title = "All users"
+    @title = t('.all_users')
     @users = User.paginate(:page => params[:page])
   end
 
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       @user = User.new
-      @title = "Sign up"
+      @title = t('.sign_up')
     end
   end
   
@@ -30,36 +30,36 @@ class UsersController < ApplicationController
       @user = User.new(params[:user])
       if @user.save
         sign_in @user
-        flash[:success] = "Welcome to the Sample App!"
+        flash[:success] = t('.welcome')
         redirect_to @user
       else
-        @title = "Sign up"
+        @title = t('.sign_up')
         render 'new'
       end
     end
   end
   
   def edit
-    @title = "Edit user"
+    @title = t('.edit_user')
   end
   
   def update
     if @user.update_attributes(params[:user])
-      flash[:success] = "Profile updated."
+      flash[:success] = t('.profile_up')
       redirect_to @user
     else
-      @title = "Edit user"
+      @title = t('.edit_user')
       render 'edit'
     end
   end
   
   def destroy
     if User.find(params[:id]) == current_user
-      flash[:error] = "not erases itself"
+      flash[:error] = t('.n_eras_its')
       redirect_to users_path
     else
       User.find(params[:id]).destroy
-      flash[:success] = "User destroyed."
+      flash[:success] = t('.user_destroyed')
       redirect_to users_path
     end
   end

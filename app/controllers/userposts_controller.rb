@@ -4,19 +4,19 @@ class UserpostsController < ApplicationController
   
   def index
     @user = User.find(params[:user_id])
-    @title = "All posts" + " " + @user.name
+    @title = t('.all_posts') + " " + @user.name
     @userposts = @user.userposts.paginate(:page => params[:page], per_page: 15)
   end
   
   def new
-    @title = "New Post"
+    @title = t('.new_post')
     @userpost = Userpost.new if signed_in?
   end
   
   def create
     @userpost = current_user.userposts.build(params[:userpost])
     if @userpost.save
-      flash[:success] = "Post created!"
+      flash[:success] = t('.post_created')
       redirect_to root_path
     else
       @feed_items = []
@@ -26,16 +26,16 @@ class UserpostsController < ApplicationController
   
   def edit
     @userpost = Userpost.find(params[:id])
-    @title = "Edit Post"
+    @title = t('.edit_post')
   end
   
   def update
     @userpost = Userpost.find(params[:id])
     if @userpost.update_attributes(params[:userpost])
-      flash[:success] = "Post Changed!"
+      flash[:success] = t('.post_changed')
       redirect_to root_path
     else
-      @title = "Edit Post"
+      @title = t('.edit_post')
       render 'edit'
     end
   end
